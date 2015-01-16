@@ -1,0 +1,39 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-color: white;
+}
+
+header,footer,nav,section,article {
+	display: block;
+}
+
+header {
+	width: 100%;
+	background-color: yellow;
+}
+
+nav {
+	width: 30%;
+	background-color: orange;
+	float: left;
+	
+}
+
+section {
+	width: 65%;
+	background-color: threedface; 
+	float: right;
+}
+
+article {
+	width: 70%;
+	background-color: olive;
+	margin: 2em 10%;
+}
+
+
+footer {
+	width: 100%;
+	background-color: red;
+}

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Usando paso de atributos</title>
+    </h:head>
+    <h:body>
+        <h1>Usando paso de atributos</h1>
+        <h:form>
+
+            <h:outputLabel value="Nombre" 
+                           for="nombre" 
+                           p:contextmenu="menu"/>
+            <h:inputText id="nombre"
+                         value="#{formBean.nombre}" 
+                         p:placeholder="Escribe tu nombre..." />
+            Nota: el menú contextual del LABEL solo funciona en Firefox
+            <br/>
+            <h:outputLabel value="Fecha nacimiento" 
+                           for="fecNac" />
+            <h:inputText value="#{formBean.fechaNacimiento}"
+                         id="fecNac"
+                         p:required="required"
+                         p:type="date"/>
+            Nota: El selector de fecha solo funciona en Chrome, Opera y Safari.
+            <br/>
+            <h:commandButton action="paso-atributos-resp" value="Calcular"/>
+            <br/>
+            <h:link outcome="index" value="Regresar"/>
+
+        </h:form>
+        <p:menu type="context" id="menu">
+            <p:menuitem label="HOLA!"/>
+            <p:menuitem label="Este es una opción del menú"/>
+        </p:menu>
+    </h:body>
+</html>
+

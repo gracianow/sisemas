@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+         
+    <ui:composition>
+         
+        <h:form id="in">
+                 
+            <h:outputLabel for="email"
+                value="#{msg.email}" /><br />          
+            <p:inputText id="email" size="40"
+                value="#{formView.email}" required="true"
+                pt:type="email" pt:placeholder="Introduzca su email" pt:autofocus="autofocus" />
+                 
+            <br />
+             
+            <h:outputLabel for="age"
+                value="#{msg.age}" /><br />            
+            <p:inputText id="age" size="40"
+                value="#{formView.age}" required="true"
+                pt:type="number" pt:min="0" pt:max="10" pt:step="2"/>
+                 
+            <h:outputLabel for="date"
+                value="#{msg.date}" /><br />           
+            <p:inputText id="date" size="40"
+                value="#{formView.date}" required="true"
+                pt:type="date" />
+                 
+        </h:form>
+     
+    </ui:composition>
+</html>
