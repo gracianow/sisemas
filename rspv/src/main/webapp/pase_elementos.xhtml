@@ -11,17 +11,14 @@
         <h1>Usando paso de elementos</h1>
         <form jsf:id="form">
             <label jsf:for="nombre">Nombre</label>
-            <input required="required" 
-                   name="nombre" 
+            <input name="nombre" 
                    jsf:id="nombre"  
                    type="text" 
                    value="#{formBean.nombre}"/>
             <br/>
             <label jsf:for="anioNacimiento">Año que naciste</label>
-            <input required="required" 
-                   name="anioNacimiento" 
+            <input name="anioNacimiento" 
                    jsf:id="anioNacimiento" 
-                   type="number" 
                    value="#{formBean.anioNacimiento}"/><br/>
             <br/>
             <h:commandButton value="Calcular edad" action="paso-elementos-resp" />            
